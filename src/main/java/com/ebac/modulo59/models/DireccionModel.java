@@ -1,41 +1,35 @@
 package com.ebac.modulo59.models;
 
 public class DireccionModel {
-    private Integer idDireccion;
-    private Integer idUsuario;
-    private String calle;
-    private Integer numero;
-    private String estado;
+    // Cambiado a Integer para permitir null
+    private Integer id;
+    private String ciudad;
+    private String pais;
 
     public DireccionModel() {}
 
-    public DireccionModel(Integer idDireccion, Integer idUsuario, String calle, Integer numero, String estado) {
-        this.idDireccion = idDireccion;
-        this.idUsuario = idUsuario;
-        this.calle = calle;
-        this.numero = numero;
-        this.estado = estado;
+    public DireccionModel(String ciudad, String pais) {
+        this.ciudad = ciudad;
+        this.pais = pais;
     }
 
-    public Integer getIdDireccion() { return idDireccion; }
-    public void setIdDireccion(Integer idDireccion) { this.idDireccion = idDireccion; }
-    public Integer getIdUsuario() { return idUsuario; }
-    public void setIdUsuario(Integer idUsuario) { this.idUsuario = idUsuario; }
-    public String getCalle() { return calle; }
-    public void setCalle(String calle) { this.calle = calle; }
-    public Integer getNumero() { return numero; }
-    public void setNumero(Integer numero) { this.numero = numero; }
-    public String getEstado() { return estado; }
-    public void setEstado(String estado) { this.estado = estado; }
+    public DireccionModel(Integer id, String ciudad, String pais) {
+        this.id = id;
+        this.ciudad = ciudad;
+        this.pais = pais;
+    }
+
+    public Integer getId() { return id; }
+    public void setId(Integer id) { this.id = id; }
+
+    public String getCiudad() { return ciudad; }
+    public void setCiudad(String ciudad) { this.ciudad = ciudad; }
+
+    public String getPais() { return pais; }
+    public void setPais(String pais) { this.pais = pais; }
 
     @Override
     public String toString() {
-        return "DireccionModel{" +
-                "idDireccion=" + idDireccion +
-                ", idUsuario=" + idUsuario +
-                ", calle='" + calle + '\'' +
-                ", numero=" + numero +
-                ", estado='" + estado + '\'' +
-                '}';
+        return "DireccionModel{id=" + id + ", ciudad='" + ciudad + "', pais='" + pais + "'}";
     }
 }
